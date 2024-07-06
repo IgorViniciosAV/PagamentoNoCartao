@@ -1,0 +1,16 @@
+:root {
+    /* --------------BACKGOUND------------- */
+    --fundo-principal: hsl(0, 0%, 100%);
+    --fundo-input: hsl(270, 3%, 87%);
+
+    /* --------------TEXT------------- */
+    --texto-input: hsl(279, 6%, 55%);
+    --texto-principal: hsl(278, 68%, 11%);
+
+    /* --------------EFECT------------- */
+    --borda-input-at: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --erro-inout: hsl(0, 100%, 66%);
+
+    /* --------------FONT------------- */
+    --font-princial: "Space Grotesk", sans-serif;
+}

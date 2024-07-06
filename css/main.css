@@ -1,0 +1,194 @@
+@import url(./root.css);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--fundo-principal);
+    font-family: var(--font-princial);
+    color: var(--texto-principal);
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+.menu-cartoes {
+    background: url(../images/bg-main-mobile.png) no-repeat;
+    background-size: 100%;
+    width: 100vw;
+    height: 30vh;
+}
+
+.cartoes {
+    width: 75vw;
+    border-radius: 10px;
+}
+
+/* ---------------- CARTÃO COSTA ------------- */
+
+.caixa-cartao-costa {
+    display: flex;
+    position: relative;
+    top: 1em;
+    left: 5em;
+    max-width: 75vw;
+    border-radius: 15px;
+    z-index: 1;
+    box-shadow: -2px 3px 10px 0px rgb(69, 69, 69);
+}
+
+@keyframes exibirCartaoFoco {
+    fron {
+        z-index: 1;
+        scale: 1;
+    }
+
+    to {
+        z-index: 2;
+        scale: 1.05;
+        box-shadow: -5px -2px 25px -5px rgb(66, 66, 66);
+    }
+}
+
+.cvc-cartao-costa {
+    color: var(--fundo-input);
+    position: absolute;
+    top: 44%;
+    left: 74%;
+    font-size: 4vw;
+}
+
+/* ---------------- CARTÃO FRENTE ------------- */
+
+.caixa-cartao-frente {
+    display: flex;
+    position: relative;
+    top: -3.6em;
+    left: 1em;
+    max-width: 75vw;
+    border-radius: 10px;
+    z-index: 1;
+    transition: 1s;
+}
+
+.caixa-cartao-frente div {
+    position: absolute;
+    top: 10%;
+    left: 4%;
+
+    background-color: var(--fundo-principal);
+    width: 1.6em;
+    height: 1.5em;
+    border-radius: 50%;
+}
+
+.caixa-cartao-frente div::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 130%;
+
+    background-color: transparent;
+    border: solid 1px var(--fundo-principal);
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+}
+
+.numero-cartao {
+    color: var(--fundo-input);
+    position: absolute;
+    top: 55%;
+    left: 7%;
+    font-size: 5vw;
+}
+
+.proprietario-cartao {
+    color: var(--fundo-input);
+    position: absolute;
+    top: 80%;
+    left: 7%;
+    font-size: 2.5vw;
+}
+
+.validade-cartao {
+    color: var(--fundo-input);
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    font-size: 2.5vw;
+}
+
+/* ---------------------- INPUTS -------------------------- */
+
+.menu-principal {
+    display: flex;
+    flex-flow: column;
+    padding: 25% 5% 5% 5%;
+    gap: .5em;
+}
+
+.secao-nome-numero {
+    display: flex;
+    flex-flow: column;
+    gap: .2em;
+}
+
+.caixa-nome,
+.caixa-numero {
+    display: flex;
+    flex-flow: column;
+}
+
+.input-cartao {
+    margin-top: .5em;
+    margin-bottom: 1em;
+    border: 1px solid var(--texto-input);
+    border-radius: 5px;
+    height: 6vh;
+    padding-left: 1em;
+    font-size: 17px;
+    transition: 150ms;
+}
+
+.input-cartao::placeholder {
+    color: var(--texto-input);
+    font-size: 17px;
+    font-weight: 600;
+    opacity: 60%;
+    font-family: var(--font-princial);
+}
+
+.input-cartao:focus {
+    border: 1px solid hsl(278, 94%, 30%);
+    outline: 0;
+}
+
+.caixa-data {
+    display: flex;
+    gap: 1em;
+}
+
+.caixa-data-inputs {
+    display: grid;
+    grid-template-columns: 22% 22% 48%;
+    column-gap: 4%;
+}
+
+.botao {
+    border: 0;
+    border-radius: 5px;
+    height: 6vh;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: var(--font-princial);
+    color: var(--fundo-input);
+    background-color: var(--texto-principal);
+    cursor: pointer;
+}

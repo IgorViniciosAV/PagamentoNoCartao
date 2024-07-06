@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Preencha os dados</title>
+
+</head>
+
+<body>
+
+    <header class="menu-cartoes">
+        <section class="secao-cartao-costa">
+            <div class="caixa-cartao-costa">
+                <img class="imagem-cartao-costa cartoes" src="./images/bg-card-back.png" alt="">
+                <p class="cvc-cartao-costa">000</p>
+            </div>
+        </section>
+
+        <section class="secao-cartao-frente">
+            <div class="caixa-cartao-frente">
+                <img class="imagem-cartao-frente cartoes" src="./images/bg-card-front.png" alt="">
+                <div></div>
+                <p class="numero-cartao">0000 0000 0000 0000</p>
+                <p class="proprietario-cartao">JANE APPLESEED</p>
+                <p class="validade-cartao">00/00</p>
+            </div>
+        </section>
+    </header>
+
+    <main class="menu-principal">
+        <section class="secao-nome-numero">
+            <div class="caixa-nome">
+                <p>PROPRIETÁRIO DO CARTÃO</p>
+                <input class="input-cartao" type="text" placeholder="e.g Jane Applessed">
+            </div>
+            <div class="caixa-numero">
+                <p>NÚMERO DO CARTÃO</p>
+                <input class="input-cartao" type="text" maxlength="19" placeholder="e.g 1234 5678 9123 0000">
+            </div>
+        </section>
+
+        <section class="secao-data-cvc">
+            <div class="caixa-data">
+                <p>VALITADE (MM/YY) </p>
+                <p>CVC</p>
+            </div>
+            <div class="caixa-data-inputs">
+                <input class="input-data-mes input-cartao" type="text" maxlength="2" placeholder="MM">
+                <input class="input-data-ano input-cartao" type="text" maxlength="2" placeholder="YY">
+                <input class="input-cvc input-cartao" type="text" maxlength="3" placeholder="e.g 123">
+            </div>
+        </section>
+        
+        <button class="botao">Confirmar</button>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
