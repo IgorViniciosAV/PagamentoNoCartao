@@ -9,6 +9,7 @@ const dadosCVC = document.querySelector('.cvc-cartao-costa');
 const dadosNumeroCartao = document.querySelector('.numero-cartao');
 const dadosProprietario = document.querySelector('.proprietario-cartao');
 const dadosValidadeCartao = document.querySelectorAll('.validade-cartao > b');
+const dadosValidadeCartaoTodo = document.querySelector('.validade-cartao');
 
 
 
@@ -60,16 +61,43 @@ function confirmarPagamento() {
 function exibirLadoDoCartaoEmFoco() {
     inputsCartao.forEach((input, index) => {
         input.addEventListener('focus', () => {
-            if (index == 4) {
-                cartaoCosta.style.animation = 'exibirCartaoFoco 600ms forwards';
-                cartaoFrente.style.animation = '';
-                // dadosNumeroCartao.style.background = ''
-            } else {
+            if (index == 0) {
                 cartaoFrente.style.animation = 'exibirCartaoFoco 600ms forwards';
-                // dadosNumeroCartao.style.background = 'rgba(255, 255, 255, 0.162)'
-                // dadosNumeroCartao.style.letterSpacing = '4px'
+                dadosProprietario.style.background = 'rgba(255, 255, 255, 0.162)'
                 cartaoCosta.style.animation = '';
+            } 
+            else if (index == 1) {
+                cartaoFrente.style.animation = 'exibirCartaoFoco 600ms forwards';
+                dadosNumeroCartao.style.background = 'rgba(255, 255, 255, 0.162)'
+                cartaoCosta.style.animation = '';
+            } 
+            else if (index == 2 || index == 3) {
+                cartaoFrente.style.animation = 'exibirCartaoFoco 600ms forwards';
+                dadosValidadeCartaoTodo.style.background = 'rgba(255, 255, 255, 0.162)'
+                cartaoCosta.style.animation = '';
+            }
+            else {
+                cartaoCosta.style.animation = 'exibirCartaoFoco 600ms forwards';
+                dadosCVC.style.background = 'rgba(0, 0, 0, 0.1)'
+                cartaoFrente.style.animation = '';
             };
+            console.log(input, index)
+        });
+
+        input.addEventListener('blur', () => {
+            if (index == 0) {
+                dadosProprietario.style.background = ''
+            } 
+            else if (index == 1) {
+                dadosNumeroCartao.style.background = ''
+            } 
+            else if (index == 2 || index == 3) {
+                dadosValidadeCartaoTodo.style.background = ''
+            } 
+            else {
+                dadosCVC.style.background = ''
+            };
+            console.log(input, index)
         });
     });
 }

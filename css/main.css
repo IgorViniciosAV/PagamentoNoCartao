@@ -8,6 +8,7 @@
 body {
     background-color: var(--fundo-principal);
     font-family: var(--font-princial);
+    /* font-family: "Ubuntu", sans-serif; */
     color: var(--texto-principal);
     font-size: 15px;
     letter-spacing: 2px;
@@ -41,6 +42,7 @@ body {
     border-radius: 15px;
     z-index: 1;
     box-shadow: -2px 3px 10px 0px rgb(69, 69, 69);
+    font-family: var(--font-dados);
 }
 
 @keyframes exibirCartaoFoco {
@@ -59,9 +61,15 @@ body {
 .cvc-cartao-costa {
     color: var(--fundo-input);
     position: absolute;
-    top: 44%;
+    top: 43%;
     left: 74%;
     font-size: 4vw;
+
+    border-radius: 4px;
+    padding: 0.1em 0.3em 0 0.3em;
+    line-height: 1.1em;
+    transition: background-color 600ms;
+    /* background-color: gray; */
 }
 
 /* ---------------- CARTÃO FRENTE ------------- */
@@ -75,6 +83,7 @@ body {
     border-radius: 10px;
     z-index: 1;
     transition: 1s;
+    font-family: var(--font-dados);
 }
 
 .caixa-cartao-frente div {
@@ -108,21 +117,23 @@ body {
     left: 7%;
     font-size: 5vw;
     transition: background-color 600ms;
-    padding: 0.1em;
+    padding: 0.1em 0.2em;
     border-radius: 5px;
-}
-
-.numero-cartao:hover {
-    background-color: rgba(255, 255, 255, 0.162);
-
+    letter-spacing: 3px;
+    line-height: 1.2em;
 }
 
 .proprietario-cartao {
     color: var(--fundo-input);
     position: absolute;
     top: 80%;
-    left: 7%;
+    left: 8%;
     font-size: 2.5vw;
+
+    border-radius: 4px;
+    padding: 0.2em 0.3em;
+    line-height: 1.1em;
+    transition: background-color 600ms;
 }
 
 .validade-cartao {
@@ -131,7 +142,13 @@ body {
     top: 80%;
     left: 80%;
     font-size: 2.5vw;
+
+    border-radius: 4px;
+    padding: 0.1em 0.3em;
+    line-height: 1.2em;
+    transition: background-color 600ms;
 }
+
 
 /* ---------------------- INPUTS -------------------------- */
 
