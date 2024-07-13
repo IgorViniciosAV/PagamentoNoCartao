@@ -104,9 +104,17 @@ body {
 .numero-cartao {
     color: var(--fundo-input);
     position: absolute;
-    top: 55%;
+    top: 54%;
     left: 7%;
     font-size: 5vw;
+    transition: background-color 600ms;
+    padding: 0.1em;
+    border-radius: 5px;
+}
+
+.numero-cartao:hover {
+    background-color: rgba(255, 255, 255, 0.162);
+
 }
 
 .proprietario-cartao {
@@ -191,4 +199,39 @@ body {
     color: var(--fundo-input);
     background-color: var(--texto-principal);
     cursor: pointer;
+}
+
+/* ------------- PAGINA CONFIRMAÇÃO ------------------- */
+
+.container-confirmacao {
+    /* position: relative;
+    top: 15%; */
+    /* margin-top: 8em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 1em;
+}
+
+.agradecer__confirmacao {
+    font-size: 2em;
+    margin-top: .5em;
+    font-weight: 600;
+}
+
+.feedback__confirmacao {
+    color: var(--texto-input);
+    font-weight: 700;
+    font-size: 1.1em;
+    opacity: 80%;
+    margin-bottom: 2em;
+}
+
+.botao-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 88%;
 }

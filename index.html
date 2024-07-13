@@ -30,8 +30,8 @@
                 <img class="imagem-cartao-frente cartoes" src="./images/bg-card-front.png" alt="">
                 <div></div>
                 <p class="numero-cartao">0000 0000 0000 0000</p>
-                <p class="proprietario-cartao">JANE APPLESEED</p>
-                <p class="validade-cartao">00/00</p>
+                <p class="proprietario-cartao">MATHEUS ALVES</p>
+                <p class="validade-cartao"><b>00</b>/<b>00</b></p>
             </div>
         </section>
     </header>
@@ -40,11 +40,11 @@
         <section class="secao-nome-numero">
             <div class="caixa-nome">
                 <p>PROPRIETÁRIO DO CARTÃO</p>
-                <input class="input-cartao" type="text" placeholder="e.g Jane Applessed">
+                <input class="input-cartao" type="text" placeholder="e.x Matheus Alves" maxlength="27">
             </div>
             <div class="caixa-numero">
                 <p>NÚMERO DO CARTÃO</p>
-                <input class="input-cartao" type="text" maxlength="16" placeholder="e.g 1234 5678 9123 0000">
+                <input class="input-cartao" type="text" maxlength="16" placeholder="e.x 1234 5678 9123 0000">
             </div>
         </section>
 
@@ -54,9 +54,9 @@
                 <p>CVC</p>
             </div>
             <div class="caixa-data-inputs">
-                <input class="input-data-mes input-cartao" type="text" maxlength="2" placeholder="MM">
-                <input class="input-data-ano input-cartao" type="text" maxlength="2" placeholder="YY">
-                <input class="input-cvc input-cartao" type="text" maxlength="3" placeholder="e.g 123">
+                <input class="input-data-mes input-cartao" id="input-validade" type="text" maxlength="2" oninput="irParaAno()" placeholder="MM">
+                <input class="input-data-ano input-cartao" id="input-validade" type="text" maxlength="2" placeholder="YY">
+                <input class="input-cvc input-cartao" type="text" maxlength="3" placeholder="e.x 123">
             </div>
         </section>
         
